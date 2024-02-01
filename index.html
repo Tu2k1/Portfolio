@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">TURKI</h1>
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blogs">Blogs</a>
+                    <ul class="submenu">
+                        <li><a href="#web_frameworks">Web Frameworks</a>
+                            <ul class="submenu2">
+                                <li><a href="#laravel">Laravel</a></li>
+                                <li><a href="#django">Django</a></li>
+                                <li><a href="#spring_boot">Spring Boot</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#machine_learning">Machine Learning</a>
+                            <ul class="submenu2">
+                                <li><a href="#computer_vision">Computer Vision</a></li>
+                                <li><a href="#super_vs_unsuper">Supervised Learning vs Unsupervised Learning</a></li>
+                                <li><a href="#nlp">Natural Language Processing</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="javascript:void(0);" id="admin">Admin Page</a></li>
+            </ul>
+        </nav>
+    </header>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <p>Name: Turki Alharbi</p>
+                <p>Major: Computer Science at Qassim University</p>
+                <p>Interests: Web development, especially back-end development. I enjoy solving coding problems on platforms like CodeWars and LeetCode.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Pomodoro Technique</h3>
+                <p>About: The Pomodoro Technique App is an Android app that helps users to stay focused on their work by using the Pomodoro Technique. <br>The Pomodoro Technique is a time management method that breaks down work into 25-minute intervals, separated by short breaks.</p>
+                <p>Tools: Kotlin and Android Studio</p>
+                <a href="https://github.com/Tu2k1/Pomodoro-Technique" target="_blank">Repository Link</a>
+            </div>
+            <br>
+            <div class="project">
+                <h3>User-RESTful-API</h3>
+                <p>About: This is a simple Node.js CRUD application that allows users to create, read, update, and delete users.</p>
+                <p>Tools: JavaScript, Node.js, Express.js, MongoDB</p>
+                <a href="https://github.com/Tu2k1/User-RESTful-API" target="_blank">Repository Link</a>
+            </div>
+            <br>
+            <div class="project">
+                <h3>University System</h3>
+                <p>About:This project is a simple university administration system. It allows users to register students, add teachers, add marks, and view statistics..</p>
+                <p>Tools: Java and Swing.</p>
+                <a href="https://github.com/Tu2k1/UniversitySystem" target="_blank">Repository Link</a>
+            </div>
+        </section>
+        <section id="blogs">
+            <h2>Blogs</h2>
+            <div class="blog">
+                <h2 id="web_frameworks">Web Frameworks</h2>
+                <ul class="blogs_content">
+                    <li><a href="https://builtin.com/software-engineering-perspectives/laravel" id="laravel" target="_blank">Laravel</a></li>
+                    <li><a href="https://builtin.com/software-engineering-perspectives/django" id="django" target="_blank">Django</a></li>
+                    <li><a href="https://www.ibm.com/topics/java-spring-boot" id="spring_boot" target="_blank">Spring Boot</a></li>
+                </ul>
+            </div>
+            <div class="blog">
+                <h2 id="machine_learning">Machine Learning</h2>
+                <ul class="blogs_content">
+                    <li><a href="https://www.simplilearn.com/computer-vision-article" id="computer_vision" target="_blank">Computer Vision</a></li>
+                    <li><a href="https://www.ibm.com/blog/supervised-vs-unsupervised-learning/" id="super_vs_unsuper" target="_blank">Supervised Learning vs Unsupervised Learning</a></li>
+                    <li><a href="https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP" id="nlp" target="_blank">Natural Language Processing</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="cv">
+            <iframe src="./view/cv.html" width="100%" height="200" title="CV" style="border: none;" scrolling="no"></iframe>
+        </section>
+        <section id="contact">
+            <iframe src="./view/contact.html" width="100%" height="600" title="Contact Form" scrolling="yes" style="border: none;"></iframe>
+        </section> 
+
+        <iframe src="./view/footer.html" width="100%" height="80" title="Footer" style="border: none;"></iframe>
+
+    
+    <script>
+        const adminLink = document.getElementById("admin");
+        adminLink.addEventListener("click", function () {
+            const password = prompt("Enter the admin password:");
+            if (password === "1234") {
+                // Password is correct, allow access to the admin page
+                window.location.href = "./view/admin.php"; // Redirect to the admin page
+            } else {
+                // Incorrect password, show a reject message
+                alert("Access Denied. Incorrect password.");
+            }
+        });
+    </script>
+</body>
+</html>
